@@ -41,7 +41,7 @@ class Body extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="userStats">
         <NewUser handleFormSubmit={this.handleFormSubmit} />
         <AllUsers users={this.state.users} />
       </div>

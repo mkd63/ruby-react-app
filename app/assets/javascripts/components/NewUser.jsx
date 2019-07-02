@@ -14,10 +14,12 @@ const NewUser = props => {
       <input
         ref={input => (formFields.name = input)}
         placeholder="Enter the name of the item"
+        required
       />
       <input
         ref={input => (formFields.profile_pic = input)}
         placeholder="Enter a description"
+        required
       />
       <button>Submit</button>
     </form>
