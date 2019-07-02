@@ -1,13 +1,11 @@
-import React from "react";
-
 class Header extends React.Component {
   render() {
     return (
       <div>
-        <h1>Hello, World!</h1>
+        <h1 className="head">
+          prep<span className="tk">t✓ck</span>
+        </h1>
       </div>
     );
   }
 }
-
-export default Header;
