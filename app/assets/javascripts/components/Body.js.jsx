@@ -2,7 +2,9 @@ class Body extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: []
+      uploaded: false,
+      name: "",
+      profilePic: ""
     };
     this.handleFormSubmit = this.handleFormSubmit.bind(this);
     this.addNewUser = this.addNewUser.bind(this);
@@ -22,27 +24,30 @@ class Body extends React.Component {
         return response.json();
       })
       .then(user => {
-        this.addNewUser(user);
+        console.log(user.name);
+        this.addNewUser(user.name, user.profile_pic);
       });
   }
-  addNewUser(user) {
+  addNewUser(name, profilePic) {
     this.setState({
-      fruits: this.state.users.concat(user)
+      uploaded: true,
+      name: name,
+      profilePic: profilePic
     });
-  }
-  componentDidMount() {
-    fetch("/api/v1/users.json")
-      .then(response => {
-        return response.json();
-      })
-      .then(data => {
-        this.setState({ users: data });
-      });
+    console.log("refresh");
   }
   render() {
     return (
       <div className="userStats">
-        <NewUser handleFormSubmit={this.handleFormSubmit} />
+        {!this.state.uploaded && (
+          <NewUser handleFormSubmit={this.handleFormSubmit} />
+        )}
+        {this.state.uploaded && (
+          <DisplayUser
+            name={this.state.name}
+            profilePic={this.state.profilePic}
+          />
+        )}
       </div>
     );
   }

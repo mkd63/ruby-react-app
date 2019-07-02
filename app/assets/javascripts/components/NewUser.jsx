@@ -36,6 +36,7 @@ class NewUser extends React.Component {
         <form
           class="profile-form"
           onSubmit={e => {
+            e.preventDefault();
             this.props.handleFormSubmit(
               this.state.formFields.name.value,
               this.state.formFields.profile_pic
