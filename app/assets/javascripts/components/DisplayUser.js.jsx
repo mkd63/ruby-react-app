@@ -4,9 +4,10 @@ class DisplayUser extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>{this.props.name}</h1>
-        <img src={this.props.profilePic} />
+      <div className="display">
+        <h1 className="cyp">Your Profile</h1>
+        <h1 className="name"> {this.props.name}</h1>
+        <img className="profilePic" src={this.props.profilePic} />
       </div>
     );
   }
