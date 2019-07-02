@@ -1,7 +1,52 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+input {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background: none;
+  &::placeholder {
+    color: #fff;
+  }
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border: none;
+  box-shadow: none;
+  -moz-box-shadow: none;
+  border-radius: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 1em;
+  width: 5em;
+  height: 1.5em;
+  background: white;
+  border-radius: 1em;
+  border-style: none;
+  color: #686de0;
+  font-size: 1.25em;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  &:hover {
+    letter-spacing: 1px;
+    background: #686de0;
+    color: white;
+  }
+}
+
 .head {
   color: #fff;
   padding-bottom: 30px;
   padding-left: 15px;
+  margin: 0px;
 }
 .navb {
   background-color: #27272b;
@@ -10,12 +55,18 @@
 .tk {
   color: orange;
 }
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-}
+
 .userStats {
   padding-top: 40px;
   background-color: #686de0;
+}
+
+.profile-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  input {
+    margin: 0.5em;
+    min-width: 300px;
+  }
 }

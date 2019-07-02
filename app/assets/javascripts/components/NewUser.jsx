@@ -3,6 +3,7 @@ const NewUser = props => {
 
   return (
     <form
+      class="profile-form"
       onSubmit={e => {
         props.handleFormSubmit(
           formFields.name.value,
