@@ -4,6 +4,7 @@ class Main extends React.Component {
       <div>
         <Header />
         <Body />
+        <Footer />
       </div>
     );
   }
