@@ -13,7 +13,7 @@ class Body extends React.Component {
     let body = JSON.stringify({
       user: { name: name, profile_pic: profile_pic }
     });
-    fetch("http://localhost:3000/api/v1/users", {
+    fetch("/api/v1/users", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
