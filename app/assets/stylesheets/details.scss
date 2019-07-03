@@ -102,7 +102,12 @@ button {
   //margin-left: 700px;
   text-align: center;
 }
-
+.image-upload > input {
+  display: none;
+}
+label[for="file-input"] > img {
+  cursor: pointer;
+}
 .profilePic {
   max-height: 350px;
   max-width: 350px;

@@ -49,13 +49,20 @@ class NewUser extends React.Component {
             placeholder="Enter your name"
             required
           />
-          <input
-            ref={this.fileInputRef}
-            className="FileInput"
-            type="file"
-            onChange={this.onFilesAdded}
-            required
-          />
+          <div class="image-upload">
+            <label for="file-input">
+              <img src="./placeholder.png" />
+            </label>
+
+            <input
+              id="file-input"
+              ref={this.fileInputRef}
+              className="FileInput"
+              type="file"
+              onChange={this.onFilesAdded}
+              required
+            />
+          </div>
           <button>Submit</button>
         </form>
         <img src={this.state.imageBase64} />
