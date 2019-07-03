@@ -54,6 +54,7 @@ class NewUser extends React.Component {
             className="FileInput"
             type="file"
             onChange={this.onFilesAdded}
+            required
           />
           <button>Submit</button>
         </form>
