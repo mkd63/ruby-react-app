@@ -7,9 +7,15 @@ input {
   border-top: none;
   border-left: none;
   border-right: none;
-  background: none;
+  border: none;
+  padding: 10px;
+  padding-left: 16px;
+  border-radius: 20px;
+  background: #fff;
+  font-family: "Proxima Nova Rg", sans-serif;
+  font-size: 18px;
   &::placeholder {
-    color: #fff;
+    color: #000000;
   }
 }
 
@@ -49,20 +55,20 @@ button {
   margin-bottom: 30px;
   border-bottom: 3px solid #27272b;
   border-width: thin;
+  border: none;
   margin-left: 585px;
   margin-right: 585px;
 }
 
 .head {
   color: #fff;
-  padding-bottom: 30px;
-  padding-left: 15px;
-  margin: 0px;
   font-family: "Proxima Nova Rg", sans-serif;
 }
 .navb {
+  height: 70px;
+  padding-top: 20px;
+  padding-left: 20px;
   background-color: #27272b;
-  padding-top: 10px;
 }
 .tk {
   color: orange;
@@ -70,7 +76,7 @@ button {
 
 .userStats {
   padding-top: 40px;
-  background-color: #686de0;
+  background-color: #303035;
   padding-bottom: 355px;
 }
 
@@ -82,6 +88,11 @@ button {
   text-align: center;
   padding-top: 30px;
   padding-bottom: 15px;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
 }
 
 .profile-form {
@@ -107,14 +118,16 @@ button {
 }
 label[for="file-input"] > img {
   cursor: pointer;
-  max-height: 350px;
-  max-width: 350px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
 }
 .profilePic {
-  max-height: 350px;
-  max-width: 350px;
+  height: 250px;
+  width: 250px;
+  border-radius: 50%;
   margin-top: 50px;
-  margin-left: 590px;
+  align-self: center;
 }
 
 #preview-img {

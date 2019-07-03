@@ -3,7 +3,7 @@ class NewUser extends React.Component {
     super(props);
     this.state = {
       formFields: {},
-      imageBase64: "./placeholder.png"
+      imageBase64: "./placeholder2.png"
     };
     this.onFilesAdded = this.onFilesAdded.bind(this);
     this.getBase64 = this.getBase64.bind(this);
@@ -31,7 +31,7 @@ class NewUser extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="profile">
         <h3 className="cyp">Create Your Profile</h3>
         <form
           class="profile-form"
@@ -44,11 +44,6 @@ class NewUser extends React.Component {
             e.target.reset();
           }}
         >
-          <input
-            ref={input => (this.state.formFields.name = input)}
-            placeholder="Enter your name"
-            required
-          />
           <div class="image-upload">
             <label for="file-input">
               <img src={this.state.imageBase64} />
@@ -63,6 +58,11 @@ class NewUser extends React.Component {
               required
             />
           </div>
+          <input
+            ref={input => (this.state.formFields.name = input)}
+            placeholder="Enter your name"
+            required
+          />
           <button>Submit</button>
         </form>
       </div>
