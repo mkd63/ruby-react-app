@@ -3,7 +3,7 @@ class NewUser extends React.Component {
     super(props);
     this.state = {
       formFields: {},
-      imageBase64: ""
+      imageBase64: "./placeholder.png"
     };
     this.onFilesAdded = this.onFilesAdded.bind(this);
     this.getBase64 = this.getBase64.bind(this);
@@ -51,7 +51,7 @@ class NewUser extends React.Component {
           />
           <div class="image-upload">
             <label for="file-input">
-              <img src="./placeholder.png" />
+              <img src={this.state.imageBase64} />
             </label>
 
             <input
@@ -65,7 +65,6 @@ class NewUser extends React.Component {
           </div>
           <button>Submit</button>
         </form>
-        <img src={this.state.imageBase64} />
       </div>
     );
   }

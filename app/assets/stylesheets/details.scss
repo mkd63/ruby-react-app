@@ -107,10 +107,17 @@ button {
 }
 label[for="file-input"] > img {
   cursor: pointer;
+  max-height: 350px;
+  max-width: 350px;
 }
 .profilePic {
   max-height: 350px;
   max-width: 350px;
   margin-top: 50px;
   margin-left: 590px;
+}
+
+#preview-img {
+  max-height: 350px;
+  max-width: 350px;
 }
